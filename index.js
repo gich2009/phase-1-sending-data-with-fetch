@@ -24,8 +24,7 @@ function submitData(userName, userEmail){
   return fetch (destinationURL, configurationObject)
   .then((response) => response.json())
   .then((data) => {
-    let newId = data.id;
-    document.body.innerHTML = newId;
+    document.body.innerHTML = data.id;
   })
   .catch((error) => {
     document.body.innerHTML = error.message;
